@@ -680,3 +680,13 @@ rivian
 
 console.log(rivian.speedUS);
 */
+
+
+const Person = function (fistName, birthYear){
+    this.fistName = fistName;
+    this.birthYear = birthYear;
+
+}
+
+const jonas = new Person('janos', 1991);
+console.log(jonas);
