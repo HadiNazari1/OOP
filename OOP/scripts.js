@@ -691,21 +691,3 @@ const Person = function (fistName, birthYear){
 const jonas = new Person('janos', 1991);
 console.log(jonas);
 
-Car.prototype.accelerate= function(){
-    this.speed +=10;
-    console.log(`${this.make} is going at ${this.speed} km/h`);
-}
-Car.prototype.brake= function(){
-    this. speed -=5;
-    console.log(`${this.make} is going at ${this. speed} km/h`);
-    return this;
-}
-console.log(Car.prototype);
-
-const bmw = new Car('BMW',120);
-const mercedes = new Car ('Mercedes', 95);
-
-bmw.accelerate();
-mercedes.accelerate();
-mercedes.brake();
-
