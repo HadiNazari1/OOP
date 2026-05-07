@@ -691,3 +691,20 @@ const Person = function (fistName, birthYear){
 const jonas = new Person('janos', 1991);
 console.log(jonas);
 
+const Person1= function (firstName, birthYear){
+    this,firstName= firstName;
+    this.birthYear= birthYear;
+
+}
+Person1.prototype.calcAge= function(){
+    console.log(2037  - this.birthYear);
+};
+
+const Sturdent = function( firstName, birthYear, course){
+    Person1.call(this, firstName, birthYear);
+    this.course=course;
+}
+ Sturdent.prototype.introdurce= function(){
+    console.log(`My name is ${this.firstName} and i study ${this.course}`);
+ }
+ const mike = new Sturdent( `Mike`, 2020, 'Computer Science')
