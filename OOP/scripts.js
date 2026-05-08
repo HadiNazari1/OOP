@@ -701,3 +701,28 @@ Student.prototype.introduce= function(){
 const mike =  new Student('Mike', 2020, 'Computer Sience');
 mike.introduce();
 mike.calcAge();
+
+const Ev = function (make, speed, charge){
+    Car.call(this, make, speed);
+    this.charge= charge;
+}
+Ev.prototype= Object.create(Car.prototype);
+
+Ev.prototype.chargeBattery= function(chargeTo){
+    console.log(chargeTo);
+    this.charge = chargeTo;
+    return this;
+}
+Ev.prototype.accelerate= function(){
+    this.speed += 200;
+    this.charge--;
+    console.log(`${this.make} is going at ${this. speed} km/h, with a charge of  ${this.charge}`);
+    }
+const tesla = new Ev('Tesla', 120, 23);
+tesla.chargeBattery(95);
+tesla.brake();
+tesla.accelerate(); 
+tesla.accelerate();
+
+console.log(tesla);
+
