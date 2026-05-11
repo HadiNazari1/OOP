@@ -739,3 +739,21 @@ const QuickSort = function (arr){
     return [...QuickSort(left), pivoit, ...QuickSort(right)];
 }
 console.log(QuickSort([5, 3, 8, 1, 2]));
+
+class StudentCl extends PersonCl{
+    constructor(fullName, birthYear, course){
+        super(fullName, birthYear);
+        this.course= course;
+    }
+    introduce(){
+        console.log(`My name is ${this.fullName} and I study ${this.course}`);
+    }
+
+
+}
+const john = new StudentCl('John Doe', 1990, 'Computer Science');
+john.calcAge();
+john.introduce();
+const jane = new StudentCl('Jane Smith', 2000, 'Mathematics');
+jane.introduce();
+jane.calcAge();
