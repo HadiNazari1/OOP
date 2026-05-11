@@ -726,3 +726,16 @@ tesla.accelerate();
 
 console.log(tesla);
 
+const QuickSort = function (arr){
+    if (arr.length <=1) return arr;
+    const pivoit = arr[arr.length-1];
+    const left = [];
+    const right= [];
+    for (left.length=0; left.length < arr.length-1 ; left.length++){
+        if (arr[left.length] < pivoit) left.push(arr[left.length]);
+        else right.push (arr[left.length]);
+
+    }
+    return [...QuickSort(left), pivoit, ...QuickSort(right)];
+}
+console.log(QuickSort([5, 3, 8, 1, 2]));
