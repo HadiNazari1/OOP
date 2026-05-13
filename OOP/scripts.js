@@ -815,6 +815,5 @@ const rivian= new Ev1  ('Rivian', 120, 23);
 rivian.accelerate()
 rivian.accelerate()
 rivian.brake()
-rivian.chargeBattery(50)
 rivian. accelerate();
 console.log(rivian);    
