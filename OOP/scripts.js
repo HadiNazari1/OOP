@@ -792,3 +792,29 @@ acc1.withdraw(140);
 acc1.approveLoan(1000);
 acc1.requersLoan(1000);
 console.log(acc1);
+
+class Ev1 extends Car{      
+    #charge;
+    constructor(make, speed, charge){
+        super(make, speed);
+        this.#charge=charge;
+    }
+}
+Ev1.prototype.chargeBattery= function(chargeTo){
+    this. charge= chargeTo;
+    return this;
+
+}
+Ev1.prototype.accelerate= function(){
+    this.speed +=20;
+    this.charge--;
+    console.log(`${this.make} is going at ${this. speed} km/h, with a charge of ${this.charge}`);
+    return this;
+}
+const rivian= new Ev1  ('Rivian', 120, 23);
+rivian.accelerate()
+rivian.accelerate()
+rivian.brake()
+rivian.chargeBattery(50)
+rivian. accelerate();
+console.log(rivian);    
